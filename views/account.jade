@@ -1,0 +1,20 @@
+
+p
+  a(href="/") Home
+  = " | "
+  span Account
+  = " | "
+  a(href="/logout") Log Out
+
+p Provider: 
+  = user.provider
+p ID: 
+  = user.id
+p DisplayName: 
+  = user.displayName
+if user.username
+  p Username: 
+    = user.username
+if user.emails
+  p emails: 
+    = user.emails[0].value

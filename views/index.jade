@@ -1,0 +1,21 @@
+- if(!user)
+  p
+    span Home
+    = " | "
+    a(href="/login") Log In
+- else
+  p
+    apan Home
+    = " | "
+    a(href="/account") Account
+    = " | "
+    a(href="/logout") Log Out
+
+if (!user)
+  h2 Welcome! Please log in
+else
+  h2 Hello, 
+    if user.username
+      = user.username
+    else
+      = user.displayName
