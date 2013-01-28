@@ -1,6 +1,6 @@
 
 This is a exmple using coffeescript + jade, based on Passports's exmaple.
-( See 
+( See  
   https://github.com/jaredhanson/passport-twitter  
   https://github.com/jaredhanson/passport-facebook  
   https://github.com/jaredhanson/passport-dropbox  
