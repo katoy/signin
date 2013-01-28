@@ -1,4 +1,7 @@
 
+![Build Status](https://travis-ci.org/katoy/signin.png?branch=master)](https://travis-ci.org/katoy/signin)  
+
+
 This is a exmple using coffeescript + jade, based on Passports's exmaple.
 ( See  
   https://github.com/jaredhanson/passport-twitter  
