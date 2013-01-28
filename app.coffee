@@ -5,6 +5,7 @@ ensureAuthenticated = (req, res, next) ->
 express = require 'express'
 passport = require 'passport'
 util = require 'util'
+
 TwitterStrategy = require('passport-twitter').Strategy
 FacebookStrategy = require('passport-facebook').Strategy
 DropboxStrategy = require('passport-dropbox').Strategy
@@ -44,10 +45,11 @@ passport.use new DropboxStrategy(
     done null, profile
 )
 
-app = express.createServer()
+app = express()
 app.configure ->
   app.set "views", __dirname + "/views"
   app.set "view engine", "jade"
+  app.use express.favicon()
   app.use express.logger()
   app.use express.cookieParser()
   app.use express.bodyParser()
@@ -97,5 +99,10 @@ app.get "/logout", (req, res) ->
   req.logout()
   res.redirect "/"
 
+ensureAuthenticated = (req, res, next) ->
+  return next() if req.isAuthenticated()
+  res.redirect '/login'
+
+
 app.listen conf.PORT
-console.log "Express server listening on port #{app.address().port} in #{app.settings.env} mode"
+console.log "Express server listening on port #{conf.PORT} in #{app.settings.env} mode"
