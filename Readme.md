@@ -1,5 +1,5 @@
 
-travis : [![Build Status](https://travis-ci.org/katoy/signin.png?branch=master)](https://travis-ci.org/katoy/signin)  
+travis : [![Build Status](https://travis-ci.org/katoy/signin.png?branch=master)](https://travis-ci.org/katoy/signin) [![Greenkeeper badge](https://badges.greenkeeper.io/katoy/signin.svg)](https://greenkeeper.io/)  
 
 
 This is a exmple using coffeescript + jade, based on Passports's exmaple.
