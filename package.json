@@ -12,7 +12,7 @@
     , "passport-dropbox": ">=0.1.2"
     }
   , "devDependencies": {
-      "vows": ">=0.6.4"
+      "vows": ">=0.8.3"
   }
   , "scripts" : { 
       "start" : "coffee app.coffee"
